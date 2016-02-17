@@ -1,0 +1,69 @@
+﻿@model IEnumerable<RoKa.Models.rk_grupolectura>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.rk_ciclofacturacion.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rk_departamento.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rk_municipio.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rk_pais.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rk_servicio.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rutainicial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rutafinal)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.rk_ciclofacturacion.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rk_departamento.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rk_municipio.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rk_pais.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rk_servicio.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rutainicial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rutafinal)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idgrupolectura }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idgrupolectura }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idgrupolectura })
+        </td>
+    </tr>
+}
+
+</table>

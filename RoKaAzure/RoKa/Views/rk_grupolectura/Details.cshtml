@@ -1,0 +1,74 @@
+﻿@model RoKa.Models.rk_grupolectura
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>rk_grupolectura</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_ciclofacturacion.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_ciclofacturacion.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_departamento.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_departamento.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_municipio.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_municipio.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_pais.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_pais.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_servicio.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_servicio.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rutainicial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rutainicial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rutafinal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rutafinal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idgrupolectura }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

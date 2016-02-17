@@ -1,0 +1,64 @@
+﻿@model RoKa.Models.rk_usuario
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>rk_usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_departamento.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_departamento.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_pais.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_pais.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombrecompleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombrecompleto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idmunicpipio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idmunicpipio)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

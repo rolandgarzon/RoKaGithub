@@ -1,0 +1,50 @@
+﻿@model RoKa.Models.rk_observacioneslectura
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>rk_observacioneslectura</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_servicio.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_servicio.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_tipocobroobervacion.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_tipocobroobervacion.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_tipoobervacionlectura.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_tipoobervacionlectura.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idobservacionlectura }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

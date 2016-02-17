@@ -1,0 +1,58 @@
+﻿@model RoKa.Models.rk_usuario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>rk_usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_departamento.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_departamento.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_pais.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_pais.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombrecompleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombrecompleto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idmunicpipio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idmunicpipio)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idusuario }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

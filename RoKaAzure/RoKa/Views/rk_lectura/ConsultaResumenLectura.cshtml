@@ -1,0 +1,111 @@
+﻿@model IEnumerable<RoKa.Models.LecturaResumen>
+
+@{
+    ViewBag.Title = "ConsultaResumenLectura";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Consulta Resumen de Lecturas</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Permite consultar el resumen de lecturas por año, mes y ciclo 
+            </div>
+            <br />
+            @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="panel-heading">
+                    Año
+                    <input type="text" name="ano" id="ano" />
+                    @Html.ValidationMessage("ano", "", new { @class = "text-danger" })
+                </div>
+                <div class="panel-heading">
+                    Mes
+                    <input type="text" name="mes" id="mes" />
+                    @Html.ValidationMessage("mes", "", new { @class = "text-danger" })
+                </div>
+                <div class="panel-heading">
+                    Ciclo
+                    @Html.DropDownList("ciclofacturacion")
+                </div>
+                <div class="panel-heading">
+                    <input type="submit" value="Consultar" />
+                </div>
+            }
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-horizontal">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+@if (Model!=null)
+{ 
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.terminalportatil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.asignadas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tomadas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.faltantes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.porcentaje)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.terminalportatil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.asignadas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tomadas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.faltantes)
+        </td>
+        <td>
+            <div>
+                <p>
+                    <strong>Terminal portatil #@Html.DisplayFor(modelItem => item.terminalportatil) </strong>
+                    <span class="pull-right text-muted">@Html.DisplayFor(modelItem => item.porcentaje) % Completado</span>
+                </p>
+                <div class="progress progress-striped active">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow=@Html.DisplayFor(modelItem => item.porcentaje) aria-valuemin="0" aria-valuemax="100" style="width: @Html.DisplayFor(modelItem => item.porcentaje)%">
+                        <span class="sr-only">@Html.DisplayFor(modelItem => item.porcentaje)% Complete (success)</span>
+                    </div>
+                </div>
+            </div>
+
+            @* @Html.DisplayFor(modelItem => item.porcentaje)*@
+        </td>
+    </tr>
+}
+
+</table>
+}

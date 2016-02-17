@@ -1,0 +1,58 @@
+﻿@model RoKa.Models.rk_terminalportatil
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>rk_terminalportatil</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.serie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.serie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.marca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numerocelular)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numerocelular)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imei)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imei)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idterminalportatil }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

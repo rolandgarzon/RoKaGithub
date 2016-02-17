@@ -1,0 +1,57 @@
+﻿@model IEnumerable<RoKa.Models.rk_terminalportatil>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Terminiales Portatiles</h2>
+
+<p>
+    @Html.ActionLink("Crear Nueva", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.serie)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.marca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.modelo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numerocelular)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.imei)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.serie)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.marca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numerocelular)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.imei)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idterminalportatil }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idterminalportatil }) |
+            @*@Html.ActionLink("Delete", "Delete", new { id = item.idterminalportatil })*@
+        </td>
+    </tr>
+}
+
+</table>

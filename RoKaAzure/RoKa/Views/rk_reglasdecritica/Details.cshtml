@@ -1,0 +1,82 @@
+﻿@model RoKa.Models.rk_reglasdecritica
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>rk_reglasdecritica</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_departamento.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_departamento.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_municipio.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_municipio.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_pais.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_pais.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_servicio.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_servicio.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.consumoinicial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.consumoinicial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.consumofinal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.consumofinal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.porcentajearriba)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.porcentajearriba)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.porcentajeabajo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.porcentajeabajo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idreglascritica }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,88 @@
+﻿@model RoKa.Models.rk_reglasdecritica
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>rk_reglasdecritica</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_departamento.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_departamento.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_municipio.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_municipio.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_pais.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_pais.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_servicio.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_servicio.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.consumoinicial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.consumoinicial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.consumofinal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.consumofinal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.porcentajearriba)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.porcentajearriba)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.porcentajeabajo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.porcentajeabajo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

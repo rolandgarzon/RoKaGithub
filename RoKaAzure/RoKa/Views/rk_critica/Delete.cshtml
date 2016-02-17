@@ -1,0 +1,176 @@
+﻿@model RoKa.Models.rk_critica
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>rk_critica</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_ciclofacturacion.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_ciclofacturacion.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_departamento.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_departamento.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_municipio.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_municipio.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_pais.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_pais.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_servicio.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_servicio.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rk_usuario.nombrecompleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rk_usuario.nombrecompleto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ano)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ano)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idsuscriptor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idsuscriptor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idmedidor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idmedidor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rutalectura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rutalectura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lecturaanterior)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lecturaanterior)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lecturaactual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lecturaactual)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.consumoanterior)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.consumoanterior)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.consumopromedio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.consumopromedio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.consumoactual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.consumoactual)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idobservacionanterior)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idobservacionanterior)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idobservacionactual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idobservacionactual)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

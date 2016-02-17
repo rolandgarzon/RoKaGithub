@@ -1,0 +1,97 @@
+﻿
+@model IEnumerable<RoKa.Models.LecturaResumen>
+
+@{
+    ViewBag.Title = "EliminarRegistrosdeLectura";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Eliminar Registros de Lectura</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Permite eliminar registros de lecturas por año, mes y ciclo siempre y cuando el estado sea pendiente
+            </div>
+            <br />
+            @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="panel-heading">
+                    Año
+                    <input type="text" name="ano" id="ano" />
+                    @Html.ValidationMessage("ano", "", new { @class = "text-danger" })
+                </div>
+                <div class="panel-heading">
+                    Mes
+                    <input type="text" name="mes" id="mes" />
+                    @Html.ValidationMessage("mes", "", new { @class = "text-danger" })
+                </div>
+                <div class="panel-heading">
+                    Ciclo
+                    @Html.DropDownList("ciclofacturacion")
+                </div>
+                <div class="panel-heading">
+                    <input type="submit" value="Consultar" />
+                </div>
+            }
+            <div class="panel-body">
+                <div class="row">
+                    <div class="form-horizontal">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+@if (Model != null)
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.terminalportatil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.asignadas)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.terminalportatil)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.asignadas)
+                </td>
+                <th>
+                    @using (Html.BeginForm("EliminarRegistrosdeLecturaConfirma", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                            <input type="hidden" name="ano" id="ano" value="@ViewBag.vbano" />
+                            <input type="hidden" name="mes" id="mes" value="@ViewBag.vbmes"/>
+                            <input type="hidden" name="ciclofacturacion" id="ciclofacturacion" value="@ViewBag.vbciclofacturacion" />
+                            <input type="hidden" name="terminalportatil" id="terminalportatil" value="@Html.DisplayFor(modelItem => item.terminalportatil)" />
+
+                    <input type="submit" name="deleteall" value="Eliminar" onclick="return confirm('Esta seguro de eliminar los registros?');" />
+                    @*@Html.ActionLink("Eliminar", "EliminarRegistrosdeLectura", new { id = item.asignadas})*@
+                    }
+                </th>
+            </tr>
+        }
+
+    </table>
+}

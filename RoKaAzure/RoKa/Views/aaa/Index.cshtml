@@ -1,0 +1,219 @@
+﻿@model IEnumerable<RoKa.Models.rk_lectura>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.rk_causalectura.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rk_ciclofacturacion.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rk_departamento.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rk_estadolectura.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rk_municipio.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rk_observacioneslectura.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rk_pais.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rk_servicio.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rk_tecnico.identificacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rk_terminalportatil.serie)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rk_usuario.nombrecompleto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ano)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idsuscriptor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rutalectura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lecturatomada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechatomalectura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.informacionadicional)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pasacritica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lecturafacturada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.observacionfacturada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lecturaanterior)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.consumofacturado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.consumopromedio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mesesdesacumulados)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idobservacionlectant)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechamodificacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idvigencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechalecturatomada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idmedidor)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.rk_causalectura.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rk_ciclofacturacion.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rk_departamento.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rk_estadolectura.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rk_municipio.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rk_observacioneslectura.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rk_pais.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rk_servicio.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rk_tecnico.identificacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rk_terminalportatil.serie)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rk_usuario.nombrecompleto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ano)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idsuscriptor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rutalectura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lecturatomada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechatomalectura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.informacionadicional)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pasacritica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lecturafacturada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.observacionfacturada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lecturaanterior)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.consumofacturado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.consumopromedio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mesesdesacumulados)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idobservacionlectant)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechamodificacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idvigencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechalecturatomada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idmedidor)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idlectura }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idlectura }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idlectura })
+        </td>
+    </tr>
+}
+
+</table>

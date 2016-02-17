@@ -1,0 +1,53 @@
+﻿@model IEnumerable<RoKa.Models.rk_ciclofacturacion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Ciclos de Facturacion</h2>
+
+<p>
+   @* @Html.ActionLink("Create New", "Create")*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.rk_departamento.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rk_municipio.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rk_pais.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.rk_departamento.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rk_municipio.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rk_pais.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcion)
+        </td>
+        <td>
+            @*
+    @Html.ActionLink("Edit", "Edit", new { id=item.idciclofacturacion }) |
+    @Html.ActionLink("Details", "Details", new { id=item.idciclofacturacion }) |
+    @Html.ActionLink("Delete", "Delete", new { id=item.idciclofacturacion })
+            *@
+        </td>
+    </tr>
+}
+
+</table>
